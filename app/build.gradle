@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: 'maven'
+
+//apply plugin: 'com.google.gms.google_services'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.mercy.phoodworld"
         minSdkVersion 15
@@ -11,6 +14,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    /*defaultConfig{
+    *applicationId "com.rowenah.test"
+    * minSdkVersion 15
+    *targetSdk 26
+    *versionCode 1
+    * versionName "1.0"
+    }
+    */
     buildTypes {
         release {
             minifyEnabled false
@@ -24,10 +35,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    //noinspection GradleCompatible
+    compile 'com.google.firebase:firebase-core:11.6.0'
+    implementation 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:26.+'
+  //  compile 'com.google.android.gms:play-services:8.3.0'
     testCompile 'junit:junit:4.12'
 }

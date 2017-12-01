@@ -11,4 +11,11 @@
     <string name="comm_frag">Community</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
 
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="submit">submit</string>
+    <string name="signUp">SignUp</string>
+
 </resources>
